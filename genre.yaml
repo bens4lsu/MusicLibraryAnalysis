@@ -1510,11 +1510,77 @@
   description: |
     Rooted in the court traditions and rural village life of Southeast Asia, traditional Thai music is defined by complex polyphonic stratification, non-tempered tuning, and a lack of harmony in the Western sense. Instead, ensembles build textures through simultaneous variations of a single melody across different instrumental registers. The music is divided into three primary ensemble styles: Piphat (percussion-heavy, featuring xylophone-like ranat and oboe-like pi, historically played for royal ceremonies and shadow puppet theater), Khruang Sai (string-dominated ensembles featuring saw bowed lutes and plucked zithers), and Mahori (a delicate fusion of both, featuring female vocalists). In northeastern Thailand (Isan), regional traditions like Mor Lam and Kantrum rely on the molam singer accompanied by the khaen (a bamboo mouth organ), delivering rapid, syncopated storytelling tunes.
   artists: ["Luang Pradit Phairao", "Waiphot Phetsuphan", "Sorasen", "Phatthaya Choem-phaet", "Banyen Rakkaen", "Ken Dalao", "Thepphabut Satiat"]
+  
+- genre_id: "60.06"
+  name: "African Traditional & Choral"
+  artists: ["Ladysmith Black Mambazo"]
      
+- genre_id: "70"
+  name: "New Age & Ambient"
+  
+- genre_id: "70.01"
+  name: "New Age & Ambient -> New Age & Contemporary Instrumental"
+  artists: ["Yanni", "Kitaro", "Vangelis", "George Winston"]
 
-- genre_id: "80"
+- genre_id: "70.02"
+  name: "Ambient & Dark Ambient"
+  artists: ["Stars of the Lid"]
+  
+- genre_id: "70.03"
+  name: "Celtic New Age & Etherial"
+  artists: ["Enya", "Clannad", "Dead Can Dance"]
+
+
+- genre_id: "72"
   name: "Musical Theater and Soundtracks"
+  
+- genre_id: "80"
+  name: "Classical"
+  
+- genre_id: "80.01"
+  name: "Medieval"
+  description: "Classical music composed between years 800 and 1300."
 
+- genre_id: "80.02"
+  name: "Renaissance"
+  description: "Classical music composed between years 1300 and 1600."
+  
+- genre_id: "80.03"
+  name: "Baroque"
+  description: "Classical music composed between years 1600 and 1750."  
+  
+- genre_id: "80.04"
+  name: "Classical (Era)"
+  description: "Classical music composed between years 1750 and 1820."  
+  
+- genre_id: "80.05"
+  name: "Romantic"
+  description: "Classical music composed between years 1820 and 1910."  
+  
+- genre_id: "80.06"
+  name: "Modern"
+  description: "Classical music composed since 1910."
+  
+- genre_id: "80.07"
+  name: "Contemporary Classical"
+  description: "Boundary-challenging classical music being written close to current day."
+  
+- genre_id: "80.08"
+  name: "Choral"
+  description: "Music featuring choirs."
+  
+- genre_id: "80.09"
+  name: "Classical Guitar"
+  
+- genre_id: "80.10"
+  name: "Opera"
+
+- genre_id: "80.11"
+  name: "Chamber Music"
+  
+- genre_id: "84"
+  name: "Christmas"
+  
 - genre_id: "90"
   name: "Other Audio"
   description: "Comedy or spoken content"
