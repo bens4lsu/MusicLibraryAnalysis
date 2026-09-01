@@ -1,0 +1,12 @@
+Indian Classical & Non-Western Traditional Music
+Ravi Shankar (sitar) Ustad Alla Rakha (tabla) and Nusrat Fateh Ali Khan: The taxonomy lacks dedicated nodes for Hindustani/Carnatic classical music or Qawwali/Sufi devotional music. The closest high-level parents in the file are 34: Caribbean & Afrobeats or 60: Folk Traditions, making placements like 34.11 a functional proxy rather than an exact stylistic fit.
+Bollywood & International Traditional Pop
+Abhijeet: Mapped to 72: Musical Theater and Soundtracks due to his extensive work as a Bollywood playback singer. He could alternately be placed under 13.01: Pop -> Pop Crooners.
+Алла Пугачева (Alla Pugacheva), Mark Bernes, and Vladimir Vissotski: These Soviet/Russian Estrada and Bard artists lack an Eastern European folk or Estrada category. They fit reasonably well into 13.01: Pop -> Pop Crooners or 13.04: Pop -> Singer/Songwriter, but Estrada blends theatrical pop and romance traditions that sit between several styles.
+Folktronica, Indigenous Electronic & Post-Rock
+A Tribe Called Red: Blends powwow vocals and drumming with electronic dance music (moombahton/dubstep). Mapped to 50.03: Electronic/Club -> Downtempo, though 40.07: Pop Rap & R&B Crossovers or a general electronic node are plausible alternatives.
+Mogwai: Seminal post-rock. Because the schema does not have a dedicated post-rock leaf, it was routed to 10.05.01: Jangle Pop/Dream Pop based on atmospheric instrumental rock traits, though 10.05.15: New Progressive and Math Rock is an equally valid candidate.
+Colin Stetson and Sarah Neufeld & Jerusalem In My Heart: Avant-garde drone, modern minimalism, and experimental electronics mapped into 50.03: Downtempo because the schema lacks an experimental/avant-garde instrumental category outside of 70.02: Ambient & Dark Ambient.
+Genre Hybrids
+Tyler, The Creator: Highly eclectic discography bridging alternative hip-hop, neo-soul, jazz fusion, and pop. 40.07: Pop Rap & R&B Crossovers captures the crossover nature, though earlier work aligns closer to 40.02: East Coast & Hardcore / alternative rap and later work to 30.12: Neo Soul/Nu Soul.
+Sexteto Mayor: Classic Argentine Tango. With Tango absent from the taxonomy, it was placed under 34.11: Traditional Cuban (Son & Rumba) to retain the traditional Latin acoustic ensemble classification.

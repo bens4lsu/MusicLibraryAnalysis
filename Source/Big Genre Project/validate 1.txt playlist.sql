@@ -1,0 +1,34 @@
+-- Databricks notebook source
+-- DBTITLE 1,Load music library and check for missing genres
+-- MAGIC %python
+-- MAGIC # Load the tab-delimited UTF-16 encoded music library file
+-- MAGIC df = spark.read.csv(
+-- MAGIC     '/Volumes/workspace/default/s3vol/MusicLibrary/1.txt',
+-- MAGIC     sep='\t',
+-- MAGIC     header=True,
+-- MAGIC     inferSchema=True,
+-- MAGIC     encoding='UTF-16'
+-- MAGIC )
+-- MAGIC
+-- MAGIC print(f"Loaded {df.count()} tracks from music library")
+-- MAGIC
+-- MAGIC # Get distinct genres from music library
+-- MAGIC music_genres = df.select("Genre").distinct()
+-- MAGIC print(f"Found {music_genres.count()} distinct genres in music library")
+-- MAGIC
+-- MAGIC # Read the genre table
+-- MAGIC genre_table = spark.table("workspace.ml.genre")
+-- MAGIC print(f"Genre table has {genre_table.count()} genres")
+-- MAGIC
+-- MAGIC # Find genres in music library that are NOT in the genre table's full_path column
+-- MAGIC missing_genres = music_genres.join(
+-- MAGIC     genre_table.select("full_path"),
+-- MAGIC     music_genres["Genre"] == genre_table["full_path"],
+-- MAGIC     "left_anti"
+-- MAGIC ).orderBy("Genre")
+-- MAGIC
+-- MAGIC missing_count = missing_genres.count()
+-- MAGIC print(f"\n❌ Found {missing_count} genres in music library NOT in genre table:")
+-- MAGIC print("="*80)
+-- MAGIC
+-- MAGIC display(missing_genres)
