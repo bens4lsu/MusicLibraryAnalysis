@@ -1,10 +1,14 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "5"
+# ///
 # DBTITLE 1,Load genre.yaml to DataFrame
 import yaml
 import pandas as pd
 
 # Read the YAML file
-with open('/Volumes/workspace/default/s3vol/MusicLibrary/genre.yaml', 'r') as file:
+with open('/Workspace/Users/ben@concordbusinessservicesllc.com/MusicLibraryAnalysis/Files/genre.yaml', 'r') as file:
     genre_data = yaml.safe_load(file)
 
 # Convert to DataFrame
