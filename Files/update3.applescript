@@ -8,248 +8,255 @@ set errorLog to {}
 
 -- Artist data embedded directly
 set artistData to {Â
-	{artist:"Various Artists", title:"String Quartet No. 1 in D major, Op. 11: Andante", genre:"80.11: Classical -> Chamber Music"}, Â
-	{artist:"John Williams", title:"Township Kwela", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Voices Of Spring Waltz, Op.410", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Lieutenant KijŽ Suite Symphonique, Op. 60: II. Romance", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: XII. The Hunters Arrive", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Fanfare and Pursuit", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Echoes", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Vaughan Williams", title:"Serenade to Music", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Popule meus", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Cagliostro In Vienna: Overture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Where The Lemon Trees Blossom Waltz, Op.364", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: I. Introduction", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: XIII. The Procession to the Zoo", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Mendelssohn Piano Concerto No 2", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Franz Schubert", title:"8th Symphony - Allegro Moderato", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Tales From The Vienna Woods Waltz, Op.325", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Feuerfest Polka Polka, Op.269", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Torleif ThedŽen, Malmš Symphony Orchestra and Lev Markiz", title:"Concerto in E Minor for Cello and Orchestra, Op. 85: III. Adagio", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: X. The Bird Diverts the Wolf", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -  1126220237", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists", title:"Berceuse for piano in D flat major, Op. 57, CT. 7", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Vaughan Williams", title:"Five Mystical Songs: I Easter", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"De Profundis - De profundis clamavi", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Preludio", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Crucem tuam adoramus, domine", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Masanga", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Musha Musiki", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Djandjon", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Domeniconi: Koyunbaba, part 3", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Nikolai Schneider, KHG Symphony Orchestra and Joel Jenny", title:"Concerto in B Minor for Cello and Orchestra, Op. 104: I. Allegro", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Dance of the Tumblers", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Concerto for Mirimba and Orchestra", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Okeanos", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Light Cavalry Overture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Selections from Les Miserables", genre:"72: Musical Theater and Soundtracks"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Happy Hoedown", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -  1126220322", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists", title:"Canon and Gigue for 3 violins & continuo in D major: Canon in D major", genre:"80.03: Classical -> Baroque"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Hagios o Theos - Sancte Deus", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Malinke Guitars", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"PlappermŠulchen, Op.245", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Vladimir Fedoseyev", title:"Concerto in A Minor for Cello and Orchestra, Op. 129: I. Nicht zu schnell (attacca)", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Sounds Of Mary Waltz, Op.214", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: VI. The Wolf", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: VIII. The Wolf Stalks the Bird and Cat", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"A Cypress Prelude", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Lorand Fenyves & L'Orchestre de la Suisse Romande & Ernest Ansermet", title:"Rimsky-Korsakov: Scheherazade, Op.35 - The Young Prince and the Young Princess", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Lorand Fenyves & L'Orchestre de la Suisse Romande & Ernest Ansermet", title:"Rimsky-Korsakov: Scheherazade, Op.35 - Festival at Bagdad - The Sea - The Shipwreck against a rock surmounted by a bronze warrior (The Shipwreck)", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists", title:"Grand Jeu", genre:"80.03: Classical -> Baroque"}, Â
-	{artist:"John Williams", title:"O Bia", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Anon: Ductia", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Egypt March, Op.335", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Treasure Waltz (from The Gypsy Baron), Op.418", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Lorand Fenyves & L'Orchestre de la Suisse Romande & Ernest Ansermet", title:"Rimsky-Korsakov: Scheherazade, Op.35 - The Sea and Sinbad's Ship", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Vaughan Williams", title:"Five Mystical Songs: II I got me flowers", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Die Fledermaus: Overture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Accelerations Waltz, Op. 234", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Eljen a Magyar, Op.332", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Steven Isserlis and Stephen Hough", title:"Minuet in E Major, Op. 13", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Various Artists", title:"MŽditation, violin & orchestra version and various arrangements (from opera 'ThŠis'): Meditation", genre:"80.10: Classical -> Opera"}, Â
-	{artist:"Various Artists", title:"Peer Gynt Suite for orchestra (or piano or piano, 4 hands) No. 2, Op. 55: Solveig's Song", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"John Williams", title:"Anon: Saltarello", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Thunder and Lightning, Polka Op.324", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Torleif ThedŽen, Malmš Symphony Orchestra and Lev Markiz", title:"Concerto in E Minor for Cello and Orchestra, Op. 85: I. Adagio - Moderato", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: Sadko, Op.5 - A Musical Picture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -  1126215724", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Lamentaci—n-Jerusalen convertere", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Sanctus Deus", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Delirien Waltz, Op.212", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Frauenherz Polka, Op.166", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Torleif ThedŽen, Malmš Symphony Orchestra and Lev Markiz", title:"Concerto in E Minor for Cello and Orchestra, Op. 85: II. Allegro molto", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Vladimir Fedoseyev", title:"Concerto in A Minor for Cello and Orchestra, Op. 129: II. Langsam (attacca)", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: IX. Peter Prepares to Catch the Wolf", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Nutcracker Suite", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"As Summer Was Just Beginning", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Various Artists", title:"La plus que lente, waltz for piano (or orchestra), L. 121", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Brain Damage", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"The Gypsy Baron: Overture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Gennady Rozhdestvensky", title:"Concerto in A Minor for Cello and Orchestra, Op. 22: I. Allegro moderato", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Nikolai Schneider, KHG Symphony Orchestra and Joel Jenny", title:"Concerto in B Minor for Cello and Orchestra, Op. 104: II. Adagio ma non troppo", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Ego propter te flagellavi", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Triangular Situations", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Domeniconi: Koyunbaba, part 1", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Albniz (I): Mallorca, barcarola for piano in F sharp minor, Op. 202, B 41", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Breathe in the Air", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Bahn frei!, Polka Op.45", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"The Gypsy Baron: March", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"My Life Is Love And Pleasure, Op.263", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Vladimir Fedoseyev", title:"Variations on a Rococo Theme for Cello and Orchestra, Op. 33: Theme and Variations", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Torleif ThedŽen, Malmš Symphony Orchestra and Lev Markiz", title:"Concerto in E Minor for Cello and Orchestra, Op. 85: IV. Allegro, ma non troppo", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Moonlight Tango", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Lamentaci—n-Facti sunt hostes", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"De Profundis - Si iniquitates", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Satie: Gymnopedie #3", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Williams: Aeolian Suite - Toccata", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Houghton: StŽlŽ - StŽlŽ", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Lagoon Waltz, Op.411", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Hidemi Suzuki and Bach Collegium Japan", title:"Concerto in A Minor for Cello and Strings, Wq. 170: II. Andante", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -  1126220044", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Vaughan Williams", title:"Five Mystical Songs: V Antiphon", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Williams: Aeolian Suite - Double Dance", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Tarrega: Recuerdos de la Alhambra", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Satie: Gnossienne #1", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Enjoy Your Life Waltz", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Selections from Phantom fo the Opera", genre:"72: Musical Theater and Soundtracks"}, Â
-	{artist:"Various Artists", title:"Servus tuus,offertory", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Vaughan Williams", title:"Flos Campi", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"John Williams", title:"Theodorakis: Epitafios 3", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Us and Them", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Sounds Of The Spheres, Waltz Op.235", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Lieutenant KijŽ Suite Symphonique, Op. 60: V. Burial of KijŽ", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Brazilian Myths", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Two Canons", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Lorand Fenyves & L'Orchestre de la Suisse Romande & Ernest Ansermet", title:"Rimsky-Korsakov: Scheherazade, Op.35 - The Story of the Calender Prince", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -  1126215905", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Vaughan Williams", title:"Fantasia on Christmas Carols", genre:"84: Christmas"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Lamentaci—n-Incipit Lamentatio Jeremiae profhetae", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Cardillo: Core 'Ngrato", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Loreley-Rhein Chimes Waltz, Op.154", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Annenpolka, Op.117", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Carmen Quadrille, Op.134", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Champagner Polka, Op.211", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Jockey Polka, Op.245", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Gennady Rozhdestvensky", title:"Concerto in A Minor for Cello and Orchestra, Op. 22: III. Molto allegro e appasionata", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: The Tale of Tsar Saltan - Suite, Op.57 - 3. The Three Wonders", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Lamentaci—n-Migravit Judas Propter afflictionem", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"The Beautiful Blue Danube, Waltz Op.314", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Tritsch-Tratsch Polka, Op.214", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Steven Isserlis and Stephen Hough", title:"Song Without Words in D Major for Cello and Piano, Op. 109", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"De Profundis - Fiant aure tuae", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Be United Millions Waltz, Op.364", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Hidemi Suzuki and Bach Collegium Japan", title:"Concerto in A Minor for Cello and Strings, Wq. 170: III. Allegro assai", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Fanfare from La Perl", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Urban Hymns 1", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: Russian Easter Festival, Overture, Op.36", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"John Williams", title:"Guitar Makossa", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Theodorakis: Epitafios 5", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Houghton: StŽlŽ - Web", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Perpetuum mobile, Op.257", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"You and you Waltz, Op.367 (from Die Fledermaus)", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Hidemi Suzuki and Bach Collegium Japan", title:"Concerto in A Major for Cello and Strings, Wq. 172: II. Largo con sordini, mesto", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Lieutenant KijŽ Suite Symphonique, Op. 60: I. Birth of KijŽ", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"The Chair-men of the Bored", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Franz Schubert", title:"8th Symphony - Andante con moto", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"John Williams", title:"Anon: Lamento di Tristan", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Love Songs Waltz, Op. 114", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: XI. Peter Catches the Wolf", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Variations on a Hebrew Folk Song", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Another Brick in the Wall, Pt. 2", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Wine, Women and Song Waltz, Op.333", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Frans Helmerson, Gothenburg Symphony Orchestra and Neeme JŠrvi", title:"Waldesruhe (Silent Woods) for Cello and Orchestra, Op. 68: Lento e molto cantabile", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Time [The Old Tree With Winding Roots Behind the Lake of Dreams Mix]", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"VergnŸgungszug Polka, Op.281", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"One Night In Venice: Overture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Village Swallows from Austria, Op.164", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Amazing Grace", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Vaughan Williams", title:"Five Mystical Songs: III Love bade me welcome", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Lamentaci—n-Omnes amici ejus", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Ego te potavi", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Sangara", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Emperor Waltz, Op.437", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Morning Papers, Waltz Op.279", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Gennady Rozhdestvensky", title:"Concerto in A Minor for Cello and Orchestra, Op. 22: II. Andante sostenuto", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Baden-Baden Symphony Orchestra and Werner Stiefel", title:"Symphony in One Movement, Op. 9: Allegro ma non troppo - Allegro molto - Andante tranquillo - Con moto", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Hidemi Suzuki and Bach Collegium Japan", title:"Concerto in A Major for Cello and Strings, Wq. 172: I. Allegro", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Heart and Soul", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: The Tale of Tsar Saltan - Suite, Op.57 - 2. The Tsaritsa and her son afloat in the cask", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: Overture \"May Night\"", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists", title:"Suite for orchestra No 3 in D major, BWV 1068: Air", genre:"80.03: Classical -> Baroque"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Los Improperios - Quia eduxi te", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Nkosi Sikelel'i Afrika", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Comfortably Numb", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"London Philharmonic Orchestra", title:"The Great Gig in the Sky", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Radetzky March", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Barcelona Symphony Orchestra and National Orchestra of Catalonia", title:"Souvenirs, Ballet Suite, Op. 28: Hesitation (Tango)", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Hidemi Suzuki and Bach Collegium Japan", title:"Concerto in A Minor for Cello and Strings, Wq. 170: I. Allegro assai", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Lieutenant KijŽ Suite Symphonique, Op. 60: IV. Troika", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"St. Anthony Chorale", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Brother James", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Festive Overture", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: The Tale of Tsar Saltan - The Flight of the Bumble-Bee", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: Christmas Eve - Suite", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Leichtes Blut, Polka Op.319", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Rathausball TŠnze, Op.438", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Natalia Gutman, Latvian Philharmonic Orchestra and Tovijs Lifsics", title:"Grand Potpourri in D Major for Cello and Orchestra, Op. 20, J. 64", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: II. The Story Begins", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"John Williams", title:"Theodorakis: Epitafios 4", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Domeniconi: Koyunbaba, part 2", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Money", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Artist's Life Waltz, Op.316", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Vaughan Williams", title:"Five Mystical Songs: IV The call", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Mitopa", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Pizzicato Polka", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"London Philharmonic Orchestra & David Parry", title:"Adagio for Strings, Op. 11a", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Hidemi Suzuki and Bach Collegium Japan", title:"Concerto in A Major for Cello and Strings, Wq. 172: III. Allegro assai", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: VII. The Duck Is Caught", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Serenade", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Roses From The South, Waltz Op.388", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Kiss Waltz, Op.400", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"North Sea Pictures Waltz, Op.390", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: IV. The Duck - Dialogue With the Birds - Attack of the Cat", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: V. Grandfather", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Festive March", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Sarabande and March", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Minuet - Telemann", genre:"80.03: Classical -> Baroque"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists", title:"Adagio, for violin, strings & organ in G minor (composed by Remo Giazotto; not by Albinoni), T. Mi 26", genre:"80.03: Classical -> Baroque"}, Â
-	{artist:"Various Artists", title:"Peer Gynt Suite for orchestra (or piano or piano, 4 hands) No. 1, Op. 46: Morning", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"John Williams", title:"Maki", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Omby", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Sute No 2 from the Three-Cornered Hat", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Postludes", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Concerto for Double Bass Op 3", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Theme and Variations - Feese", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: The Tale of Tsar Saltan - Suite, Op.57 - 1. The Tsar's departure and Farewell", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"John Williams", title:"Williams: Aeolian Suite - Aeolian Chant", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"Satie: Gnossienne #2", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Persian March, Op.289", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Celtic Dance", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Bartok Suite from \"For Children\"", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Clash and Roar", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"De Profundis - Et ipse redimet Israel", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Joseph Francek", title:"Vienna Blood: Overture", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists, Strauss Orchestra Vienna, Norbert Neukamp", title:"Vienna Blood Waltz, Op.354", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Victor Simon, Moscow Radio Symphony Orchestra and Vladimir Fedoseyev", title:"Concerto in A Minor for Cello and Orchestra, Op. 129: III. Sehr lebhaft", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Various Artists", title:"Adagio for glass harmonica in C major, K. 356 (K. 617a)", genre:"80.04: Classical -> Classical (Era)"}, Â
-	{artist:"Orquesta Sinf—nica de la RTV Espa–ola", title:"Lamentaci—n-Viae Sion Lugent eo", genre:"80.08: Classical -> Choral"}, Â
-	{artist:"John Williams", title:"Domeniconi: Koyunbaba, part 4", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Time", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Nikolai Schneider, KHG Symphony Orchestra and Joel Jenny", title:"Concerto in B Minor for Cello and Orchestra, Op. 104: III. Finale. Allegro moderato", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Brazilian Myths", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"Various Artists", title:"Adagietto, for orchestra (from the Symphony No.5): Adagio", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"Franz Schubert", title:"Welser-mšst -  1126220141", genre:"80.05: Classical -> Romantic"}, Â
-	{artist:"John Williams", title:"Engome", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"John Williams", title:"The Magic Box", genre:"80.09: Classical -> Classical Guitar"}, Â
-	{artist:"London Philharmonic Orchestra", title:"Nobody Home", genre:"10.02.06: Rock -> Golden Age/Classic Rock -> Progressive Rock, Art Rock, & Symphonic Rock"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Lieutenant KijŽ Suite Symphonique, Op. 60: III. KijŽÕs Wedding", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Boris Karloff, Mario Rossi & Wiener Opernorchester", title:"Peter and the Wolf, Op. 67: III. The Bird", genre:"80.06: Classical -> Modern"}, Â
-	{artist:"Louisiana Youth Orchestras", title:"Little Symphony", genre:"80.07: Classical -> Contemporary Classical"}, Â
-	{artist:"L'Orchestre de la Suisse Romande and Ernest Ansermet", title:"Rimsky-Korsakov: Dubinushka, Op.62", genre:"80.05: Classical -> Romantic"} Â
+	{artist:"Camper Van Beethoven", title:"Take the Skinheads Bowling (Camper Van Beethoven)", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Ty Segall", title:"My Lady's On Fire", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Postal Service", title:"The District Sleeps Alone Tonight", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"Foxygen", title:"San Francisco", genre:"10.02.04: Rock -> Golden Age/Classic Rock -> Psychedelic Rock"}, Â
+	{artist:"Run the Jewels", title:"Close Your Eyes (And Count To Fuck)  ft Zack de la Rocha", genre:"40.09: Rap & Hip-Hop -> Trip-Hop & Abstract Hip-Hop"}, Â
+	{artist:"Mudhoney", title:"Touch Me I'm Sick", genre:"10.05.04: Rock -> Alternative Rock/Indie -> Grunge"}, Â
+	{artist:"Bon Iver", title:"Blood Bank", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Vampire Weekend", title:"Harmony Hall", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Yeah Yeah Yeahs", title:"Gold Lion", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Mannequin Pussy", title:"Sometimes", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Dehd", title:"Dog Days", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Geese", title:"Taxes", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Drums", title:"Let's Go Surfing", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Cat Power", title:"The Greatest", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Wednesday", title:"Elderberry Wine", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Parquet Courts", title:"Stoned and Starving", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Shins", title:"Phantom Limb", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Modest Mouse", title:"Ocean Breathes Salty", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Wednesday", title:"Quarry", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Fleet Foxes", title:"Mykonos", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Big Thief", title:"Shark Smile", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Sharon Van Etten", title:"Seventeen", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Neutral Milk Hotel", title:"Holland, 1945", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Of Montreal", title:"Wraith Pinned to the Mist and Other Games (Album Version)", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Wilco", title:"Heavy metal drummer", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Vampire Weekend", title:"Step", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"A Tribe Called Quest", title:"Can I Kick It?", genre:"40.05: Rap & Hip-Hop -> Conscious & Jazz Rap"}, Â
+	{artist:"Mitski", title:"Your Best American Girl", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"TV on the Radio", title:"Dlz", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Flaming Lips", title:"She Don't Use Jelly", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Mountain Goats", title:"This Year", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"The Afghan Whigs", title:"Gentlemen", genre:"10.05.04: Rock -> Alternative Rock/Indie -> Grunge"}, Â
+	{artist:"Interpol", title:"Slow Hands", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"MJ Lenderman", title:"She's Leaving You", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Death Cab for Cutie", title:"Title and Registration", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Parquet Courts", title:"Berlin Got Blurry", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Pixies", title:"Monkey Gone To Heaven", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Hamilton Leithauser + Rostam", title:"In a Black Out", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"The Decemberists", title:"Here I Dreamt I Was An Architect", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Future Islands", title:"Seasons (Waiting On You)", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Shins", title:"Caring Is Creepy", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Death Cab For Cutie", title:"Soul Meets Body", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Chairlift", title:"Bruises", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Beck", title:"E-Pro", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Kurt Vile", title:"Pretty Pimpin", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Angel Olsen", title:"Shut Up Kiss Me", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Modest Mouse", title:"Dramamine", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Interpol", title:"Untitled", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Best Coast", title:"Boyfriend", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Vampire Weekend", title:"Campus", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Waxahatchee", title:"Right Back to It (feat. MJ Lenderman)", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Bon Iver", title:"Skinny Love", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"The Flaming Lips", title:"Yoshimi Battles the Pink Robots, Pt. 1", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Phoebe Bridgers", title:"Motion Sickness", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"The Walkmen", title:"The Rat", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"The Shins", title:"New Slang", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Pixies", title:"Here Comes Your Man", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Cigarettes After Sex", title:"Apocalypse", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"TV On The Radio", title:"Wolf Like Me", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Car Seat Headrest", title:"Drunk Drivers/Killer Whales", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Bright Eyes", title:"First Day of My Life", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Mazzy Star", title:"Fade Into You", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"The Flaming Lips", title:"Do You Realize??", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Sufjan Stevens", title:"Chicago", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Wilco", title:"Jesus, Etc.", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"The White Stripes", title:"Fell in Love With a Girl", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Death Cab For Cutie", title:"I Will Follow You into the Dark", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Yeah Yeah Yeahs", title:"Maps", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Iron & Wine", title:"Such Great Heights", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Vampire Weekend", title:"A-Punk", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Neutral Milk Hotel", title:"In the Aeroplane Over the Sea", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Interpol", title:"Evil", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Modest Mouse", title:"Float On", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Pixies", title:"Where Is My Mind?", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"The Strokes", title:"Last Nite", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"American Football", title:"Never Meant", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"Animal Collective", title:"My Girls", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Animal Collective", title:"Summertime Clothes", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Archers of Loaf", title:"Web in Front", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"At the Drive-In", title:"One Armed Scissor", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"Band of Horses", title:"No One's Gonna Love You", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Band of Horses", title:"The Funeral", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Beach Fossils", title:"Down the Line", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Beach House", title:"Myth", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Beach House", title:"Space Song", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Beastie Boys", title:"Sabotage", genre:"40.01: Rap & Hip-Hop -> Old School & Golden Age"}, Â
+	{artist:"Beat Happening", title:"Indian Summer", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Beirut", title:"Nantes", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Big Star", title:"Thirteen", genre:"13.05: Pop -> Early Pop Rock & Power Pop"}, Â
+	{artist:"Bikini Kill", title:"Rebel Girl", genre:"10.03.03: Rock -> Punk Rock/New Wave -> Punk Rock"}, Â
+	{artist:"Blonde Redhead", title:"23", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Bon Iver", title:"Holocene", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"boygenius", title:"Not Strong Enough", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Bratmobile", title:"Panik", genre:"10.03.03: Rock -> Punk Rock/New Wave -> Punk Rock"}, Â
+	{artist:"The Breeders", title:"Cannonball", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"The Brian Jonestown Massacre", title:"Anemone", genre:"10.02.04: Rock -> Golden Age/Classic Rock -> Psychedelic Rock"}, Â
+	{artist:"Bright Eyes", title:"Lover I Don't Have to Love", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Broken Bells", title:"The High Road", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Built to Spill", title:"Carry the Zero", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Car Seat Headrest", title:"Can't Cool Me Down", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Caroline Polachek", title:"So Hot You're Hurting My Feelings", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Clairo", title:"Bags", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Clap Your Hands Say Yeah", title:"The Skin of My Yellow Country Teeth", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Cults", title:"Always Forever", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"The Dandy Warhols", title:"Bohemian Like You", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Danger Mouse & Karen O", title:"Turn the Light", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Daniel Johnston", title:"True Love Will Find You In the End", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Das Racist & Heems", title:"Combination Pizza Hut and Taco Bell", genre:"40.09: Rap & Hip-Hop -> Trip-Hop & Abstract Hip-Hop"}, Â
+	{artist:"Day Wave", title:"Drag", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Death Cab for Cutie", title:"I Will Possess Your Heart", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Decemberists", title:"We Both Go Down Together", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Descendents", title:"Suburban Home", genre:"10.03.09: Rock -> Punk Rock/New Wave -> Skate Punk & Pop Punk"}, Â
+	{artist:"DIIV", title:"Doused", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Dinosaur Jr.", title:"Freak Scene", genre:"10.05.02: Rock -> Alternative Rock/Indie -> Noise Rock"}, Â
+	{artist:"Dinosaur Jr.", title:"Feel the Pain", genre:"10.05.02: Rock -> Alternative Rock/Indie -> Noise Rock"}, Â
+	{artist:"Dirty Projectors", title:"Stillness Is the Move", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"DJ Shadow", title:"Midnight In a Perfect World", genre:"40.09: Rap & Hip-Hop -> Trip-Hop & Abstract Hip-Hop"}, Â
+	{artist:"Dr. Dog", title:"Where'd All the Time Go?", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Dum Dum Girls", title:"Coming Down", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Electric Six", title:"Danger! High Voltage!", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Elliott Smith", title:"Between the Bars", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Elliott Smith", title:"Say Yes", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Father John Misty", title:"Chateau Lobby #4 (In C for Two Virgins) - Live from the Hamburg Elbphilharmonie on August 8, 2019", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Father John Misty", title:"Real Love Baby", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Faye Webster", title:"But Not Kiss", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Fiona Apple", title:"Paper Bag", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Fleet Foxes", title:"Ragged Wood", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Fugazi", title:"Waiting Room", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"Future Islands", title:"A Dream of You and Me", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Galaxie 500", title:"Tugboat", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Gossip", title:"Standing In the Way of Control", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Grizzly Bear", title:"Two Weeks", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Guided By Voices", title:"Game of Pricks", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"HAIM", title:"The Wire", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Heatmiser", title:"Plainclothes Man", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Hold Steady", title:"Your Little Hoodrat Friend", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Hovvdy", title:"True Love", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Hum", title:"Stars", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"HŸsker DŸ", title:"Don't Want to Know If You Are Lonely", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"Interpol", title:"Obstacle 1", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Interpol", title:"PDA", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Iron & Wine", title:"Naked As We Came", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Japanese Breakfast", title:"Be Sweet", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Japanese Breakfast", title:"Road Head", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Jawbreaker", title:"Accident Prone", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"Jay Reatard", title:"My Shadow", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Jenny Lewis", title:"Just One of the Guys", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Jonathan Fire Eater", title:"Give Me Daughters", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Jonathan Richman & The Modern Lovers", title:"Roadrunner", genre:"10.03.02: Rock -> Punk Rock/New Wave -> Pub Rock & Proto Punk"}, Â
+	{artist:"Julian Casablancas", title:"11th Dimension", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"King Tuff", title:"Sun Medallion", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Kurt Vile", title:"Jesus Fever", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"LCD Soundsystem", title:"Daft Punk Is Playing at My House", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"LCD Soundsystem", title:"All My Friends", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"LCD Soundsystem", title:"Dance Yrself Clean", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"Le Tigre", title:"Deceptacon", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"The Lemonheads", title:"Into Your Arms", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Local Natives", title:"When Am I Gonna Lose You", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Low", title:"Words", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Lucy Dacus", title:"Night Shift", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Luna", title:"California (All the Way)", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Luscious Jackson", title:"Naked Eye", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Magdalena Bay", title:"Image", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"The Magnetic Fields", title:"The Book of Love", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Meshell Ndegeocello & Cat Power", title:"DonÕt You Want Me", genre:"30.12: R&B -> Neo Soul/Nu Soul"}, Â
+	{artist:"MGMT", title:"Electric Feel", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"MGMT", title:"Kids", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Minutemen", title:"Corona", genre:"10.03.03: Rock -> Punk Rock/New Wave -> Punk Rock"}, Â
+	{artist:"Mission of Burma", title:"Academy Fight Song", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Mitski", title:"My Love Mine All Mine", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Modest Mouse", title:"Convenient Parking", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The Moldy Peaches", title:"Anyone Else But You", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"My Morning Jacket", title:"Wordless Chorus (2025 Remaster)", genre:"10.05.12: Rock -> Alternative Rock/Indie -> Jam Bands"}, Â
+	{artist:"Nada Surf", title:"Inside of Love", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Nation of Language", title:"Sole Obsession", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"The National", title:"Fake Empire", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"The National", title:"Bloodbuzz Ohio", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"The National", title:"I Need My Girl", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Neon Indian", title:"Polish Girl", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Orville Peck", title:"Turn to Hate", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Panda Bear", title:"Comfy in Nautica", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Pavement", title:"Harness Your Hopes (B-side)", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Pavement", title:"Cut Your Hair", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Pavement", title:"Gold Soundz", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Pavement", title:"Major Leagues", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Perfume Genius", title:"Queen", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Phantogram", title:"Black Out Days", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Phoebe Bridgers", title:"Kyoto", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Phosphorescent", title:"Song For Zula", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Pinback", title:"Good to Sea", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Pinegrove", title:"Old Friends", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Porches", title:"Be Apart", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"The Promise Ring", title:"Nothing Feels Good (Remastered)", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"The Rapture", title:"House of Jealous Lovers", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Real Estate", title:"Talking Backwards", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Real Estate", title:"Beach Comber", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"The Replacements", title:"Can't Hardly Wait", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Richard Swift", title:"Lady Luck", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Rilo Kiley", title:"Portions for Foxes", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Santigold", title:"L.E.S. Artistes", genre:"40.07: Rap & Hip-Hop -> Pop Rap & R&B Crossovers"}, Â
+	{artist:"Silver Jews", title:"Random Rules", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Sky Ferreira", title:"Everything Is Embarrassing", genre:"13.07: Pop -> Synthpop & New Romantics"}, Â
+	{artist:"Sleater-Kinney", title:"Modern Girl", genre:"10.03.03: Rock -> Punk Rock/New Wave -> Punk Rock"}, Â
+	{artist:"Sleigh Bells", title:"Rill Rill", genre:"10.05.02: Rock -> Alternative Rock/Indie -> Noise Rock"}, Â
+	{artist:"Slint", title:"Good Morning, Captain", genre:"10.03.04: Rock -> Punk Rock/New Wave -> Post-Punk"}, Â
+	{artist:"Smog", title:"Cold Blooded Old Times", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Soccer Mommy", title:"Your Dog", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Sonic Youth", title:"Teen Age Riot", genre:"10.05.02: Rock -> Alternative Rock/Indie -> Noise Rock"}, Â
+	{artist:"Sonic Youth", title:"Kool Thing", genre:"10.05.02: Rock -> Alternative Rock/Indie -> Noise Rock"}, Â
+	{artist:"Sonic Youth", title:"Incinerate", genre:"10.05.02: Rock -> Alternative Rock/Indie -> Noise Rock"}, Â
+	{artist:"The Sonics", title:"Strychnine", genre:"10.03.02: Rock -> Punk Rock/New Wave -> Pub Rock & Proto Punk"}, Â
+	{artist:"Spoon", title:"The Underdog", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Spoon", title:"I Summon You", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Spoon", title:"Inside Out", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Spoon", title:"Do You", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"St. Vincent", title:"Los Ageless", genre:"10.03.10: Rock -> Punk Rock/New Wave -> Modern Art Punk"}, Â
+	{artist:"St. Vincent", title:"Digital Witness", genre:"10.03.10: Rock -> Punk Rock/New Wave -> Modern Art Punk"}, Â
+	{artist:"The Strokes", title:"Under Cover of Darkness", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"The Strokes", title:"Reptilia", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"The Strokes", title:"12:51", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Sufjan Stevens", title:"Should Have Known Better", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Sufjan Stevens", title:"Mystery of Love (From ÒCall Me By Your NameÓ)", genre:"13.04: Pop -> Singer/Songwriter"}, Â
+	{artist:"Sugar", title:"If I Can't Change Your Mind", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Suicide", title:"Dream Baby Dream", genre:"10.03.03: Rock -> Punk Rock/New Wave -> Punk Rock"}, Â
+	{artist:"Sunny Day Real Estate", title:"In Circles (2009 Remastered Version)", genre:"10.04.05: Rock -> Hardcore -> Post-Hardcore, Emo, and Screamo"}, Â
+	{artist:"Superchunk", title:"Driveway to Driveway", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Sylvan Esso", title:"Coffee", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Television", title:"See No Evil", genre:"10.03.02: Rock -> Punk Rock/New Wave -> Pub Rock & Proto Punk"}, Â
+	{artist:"Tennis", title:"Origins", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Thundercat", title:"Them Changes", genre:"30.12: R&B -> Neo Soul/Nu Soul"}, Â
+	{artist:"Toro y Moi", title:"Blessa", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Toro y Moi", title:"Ordinary Pleasure", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"TV Girl", title:"Lovers Rock", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"TV Girl", title:"Cigarettes out the Window", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"TV on the Radio", title:"Happy Idiot", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"The War on Drugs", title:"Under the Pressure", genre:"10.02.02: Rock -> Golden Age/Classic Rock -> Folk Rock"}, Â
+	{artist:"Warpaint", title:"Common Blue", genre:"13.10: Pop -> Indie Pop"}, Â
+	{artist:"Washed Out", title:"Feel It All Around", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Washed Out", title:"It All Feels Right", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"The White Stripes", title:"Icky Thump", genre:"10.03.12: Rock -> Punk Rock/New Wave -> Indie Punk/Modern Garage Rock"}, Â
+	{artist:"Whitney", title:"No Woman", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Wilco", title:"Impossible Germany", genre:"10.05.13: Rock -> Alternative Rock/Indie -> Folk Rock/Alt Country"}, Â
+	{artist:"Wild Nothing", title:"Chinatown", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"X", title:"Los Angeles", genre:"10.03.03: Rock -> Punk Rock/New Wave -> Punk Rock"}, Â
+	{artist:"Yeah Yeah Yeahs", title:"Zero", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Yeah Yeah Yeahs", title:"Heads Will Roll", genre:"10.05.10: Rock -> Alternative Rock/Indie -> Post-Grunge Alt Rock"}, Â
+	{artist:"Yo La Tengo", title:"Sugarcube", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"}, Â
+	{artist:"Yo La Tengo", title:"Autumn Sweater", genre:"10.05.01: Rock -> Alternative Rock/Indie -> Jangle Pop/Dream Pop"} Â
 		}
-
 -- Process each artist
 repeat with artistRecord in artistData
 	try
