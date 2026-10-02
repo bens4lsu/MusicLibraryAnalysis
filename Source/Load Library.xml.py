@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 from datetime import datetime
 
 libDate = dbutils.widgets.get("my_date")
@@ -11,12 +15,13 @@ print(strLibDate)
 # COMMAND ----------
 
 # DBTITLE 1,Archive library.xml file
+import shutil
 from pathlib import Path
 
-oldp = Path("/Volumes/workspace/default/s3vol/MusicLibrary/Library.xml")
+oldp = Path("/Workspace/Users/ben@concordbusinessservicesllc.com/MusicLibraryAnalysis/Files/Library.xml")
 newp = "/Volumes/workspace/default/s3vol/MusicLibrary/FileData/Library_" + strLibDate + ".xml"
 
-oldp.rename(newp)
+shutil.copy(oldp, newp)
 
 # COMMAND ----------
 

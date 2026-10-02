@@ -1,6 +1,5 @@
 -- Databricks notebook source
 
-
 create or replace table workspace.ml.temp_artist_genre_working_list as
 WITH cteMain AS (
     select artist
@@ -13,9 +12,9 @@ WITH cteMain AS (
     where 1=1
         and g.genre_id is null
         --and (lower(ll.genre) like 'rock/pop')
-        and ll.genre Not in  ( 'Classical')
+        --and ll.genre Not in  ( 'Classical')
         --and ll.artist not in ('King Gizzard & The Lizard Wizard', 'Prince', 'Madonna', 'G. Love & Special Sauce', 'Donnie Trumpet & The Social Experiment', 'Grimes')
-        and lower(ll.artist) not like 'various%'
+        --and lower(ll.artist) not like 'various%'
         
         
         -- and date_added > '2026-01-01'
