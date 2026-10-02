@@ -90,7 +90,7 @@
   artists: ["The Rolling Stones", "Canned Heat", "Eric Clapton", "Paul Butterfield Blues Band", "Johnny Winter", "The Pretty Things", "Spencer Davis Group", "Chicken Shack", "Alexis Kormer", "Derek & thee Dominos"]
   
 - genre_id: "10.02.04"
-  name: "Psychodelic Rock"
+  name: "Psychedelic Rock"
   year_emerged: 1965
   description: |
     The sixties marked a new age of hope, reconstruction, love and peace after the aftershocks of World War II. A huge spiritual hippie subculture flourished in many places, especially those with a large student population. The principal among them was the famous Height Ashbury district in San Francisco, where accordingly people wore “flowers in their hair”. These young hippies were inspired by eastern cultures and music (particularly the works of Indian Raga musician Ravi Shankar), the structure and experimental nature of Free Jazz, and (of course) countless psychedelic drugs. Especially LSD with its vivid and colorful hallucinations slowly conquered their daily lives. LSD (or acid) was strongly promoted by alternative psychologists and epistemological gurus like Timothy Leary and Aldous Huxley.
@@ -1556,10 +1556,6 @@
   name: "Romantic"
   description: "Classical music composed between years 1820 and 1910."  
   
-- genre_id: "80.06"
-  name: "Modern"
-  description: "Classical music composed since 1910."
-  
 - genre_id: "80.07"
   name: "Contemporary Classical"
   description: "Boundary-challenging classical music being written close to current day."
@@ -1594,7 +1590,7 @@
   name: "Music Lessons"
   description: "Audio tracks for voice or instrument lessons"  
   
-- genre_id: "90.04"
+- genre_id: "90.05"
   name: "Children's Songs"
   description: "Songs made for little kids."
   
