@@ -453,6 +453,13 @@
   description: |
     Artists known especially for long, live sets, improvisation, and shows that vary widly from day to day.
   artists: ["Dave Matthews Band", "O.A.R.", "Widespread Panic", "Phish"]
+  
+- genre_id: "10.05.16"
+  name: "Post-Rock"
+  year_emerged: 1995
+  description: |
+    Instrumental, cinematic, and textural rock prioritizing dynamic crescendo builds over traditional verse-chorus song structures.
+  artists: ["Mogwai", "Sigur Rós", "Explosions in the Sky", "Godspeed You! Black Emperor", "Tortoise"]
 
 
 # - genre_id: "10.06"
@@ -1472,6 +1479,12 @@
     Unlike the other three, Downtempo isn't designed for high-energy peak-hour dance floors. It was born in club "chillout rooms" where dancers went to cool off. Rhythmically, it rarely uses a rigid four-on-the-floor pattern—instead opting for slower breakbeats, hip-hop-style drums, or syncopated percussion. It borrows heavily from ambient, dub, jazz, and trip-hop.  Key sound indicators: Slow tempos, deep ambient atmospheres, relaxed beat patterns, warm acoustic or electronic textures, and a head-nodding feel.
   artists: ["Massive Attack", "Portishead", "Bonobo"]
   
+- genre_id: "50.05"
+  name: "Bass Music & Club Hybrid"
+  description: |
+    Bass-heavy modern electronic dance styles including dubstep, moombahton, club edits, and indigenous bass hybrids.
+  artists: ["A Tribe Called Red", "Skrillex", "Major Lazer"]
+  
   
 - genre_id: "60"
   name: "Folk Traditions"
@@ -1513,6 +1526,19 @@
 - genre_id: "60.07"
   name: "Russian"
   artists: []
+  
+- genre_id: "60.08"
+  name: "Indian Classical & Devotional"
+  description: |
+    Traditional Hindustani, Carnatic, and Sufi devotional music (Qawwali) anchored in classical ragas and talas.
+  artists: ["Ravi Shankar", "Alla Rakha", "Nusrat Fateh Ali Khan", "Hariprasad Chaurasia"]
+  
+- genre_id: "60.09"
+  name: "Tango & Traditional South American"
+  year_emerged: 1880
+  description: |
+    Traditional acoustic and orquesta típica dance forms from Argentina and Uruguay centered around the bandoneón.
+  artists: ["Sexteto Mayor", "Astor Piazzolla", "Carlos Gardel"]
      
 - genre_id: "70"
   name: "New Age & Ambient"
@@ -1521,9 +1547,13 @@
 #   name: "New Age & Ambient -> New Age & Contemporary Instrumental"
 #   artists: ["Yanni", "Kitaro", "Vangelis", "George Winston"]
 
-# - genre_id: "70.02"
-#   name: "Ambient & Dark Ambient"
-#   artists: ["Stars of the Lid"]
+
+
+- genre_id: "70.02"
+  name: "Ambient & Dark Ambient"
+  description: |
+    Atmospheric, textural, drone, and experimental minimalist instrumental compositions.
+  artists: ["Stars of the Lid", "Colin Stetson", "Sarah Neufeld", "Tim Hecker"]
   
 # - genre_id: "70.03"
 #   name: "Celtic New Age & Etherial"
