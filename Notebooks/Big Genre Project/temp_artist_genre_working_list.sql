@@ -1,5 +1,4 @@
 -- Databricks notebook source
-
 create or replace table workspace.ml.temp_artist_genre_working_list as
 WITH cteMain AS (
     select artist
