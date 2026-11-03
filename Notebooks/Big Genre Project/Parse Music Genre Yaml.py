@@ -220,4 +220,5 @@ spark.sql(f"DESCRIBE {table_name}").show(truncate=False)
 
 # MAGIC %sql
 # MAGIC select genre_id, name, full_path, year_emerged, description, artists from workspace.ml.genre
+# MAGIC where genre_id like '10%'
 # MAGIC order by genre_id
