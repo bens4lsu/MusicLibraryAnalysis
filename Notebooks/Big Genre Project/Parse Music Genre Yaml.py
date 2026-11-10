@@ -219,6 +219,8 @@ spark.sql(f"DESCRIBE {table_name}").show(truncate=False)
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC select genre_id, name, full_path, year_emerged, description, artists from workspace.ml.genre
-# MAGIC where genre_id like '10%'
+# MAGIC select genre_id, name, full_path, year_emerged, description, artists, size(artists) as artist_count from workspace.ml.genre
+# MAGIC where 1=1
+# MAGIC    --and genre_id like '10%'
+# MAGIC    and size(artists) > 5
 # MAGIC order by genre_id

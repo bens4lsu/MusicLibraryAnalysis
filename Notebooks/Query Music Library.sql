@@ -126,3 +126,9 @@ left outer join ml.library_snapshots lsprev on lscurr.persistent_id = lsprev.per
 inner join ctefirstsnapshotthisyear c2 on lsprev.library_snapshot_id = c2.library_snapshot_id 
 where lscurr.genre not like '84%' 
     and lsprev.genre = 'Christmas'
+
+-- COMMAND ----------
+
+--select distinct library_date from ml.library_snapshots  order by library_date desc limit 1000
+
+select * from ml.library_snapshots where library_date = '2026-10-03' and lower(artist) like 'miles%davis%'
