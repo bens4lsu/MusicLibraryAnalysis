@@ -1,13 +1,20 @@
 # Databricks notebook source
-CREATE OR REPLACE VIEW ml.library_latest AS
-
-WITH cteLatest AS (
-  SELECT MAX(library_date) AS MaxLibraryDate from ml.library_snapshots
-)
-SELECT ls.*
-FROM ml.library_snapshots ls
-INNER JOIN cteLatest ON ls.library_date = cteLatest.MaxLibraryDate
-
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
+# MAGIC %sql
+# MAGIC CREATE OR REPLACE VIEW ml.library_latest AS
+# MAGIC
+# MAGIC WITH cteLatest AS (
+# MAGIC   SELECT MAX(library_date) AS MaxLibraryDate from ml.library_snapshots
+# MAGIC )
+# MAGIC SELECT ls.*
+# MAGIC     , ly.lyrics
+# MAGIC FROM ml.library_snapshots ls
+# MAGIC INNER JOIN cteLatest ON ls.library_date = cteLatest.MaxLibraryDate
+# MAGIC LEFT OUTER JOIN ml.lyrics ly on ls.persistent_id = ly.persistentID
+# MAGIC
 
 # COMMAND ----------
 
