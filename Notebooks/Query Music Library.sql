@@ -135,9 +135,25 @@ select * from ml.library_snapshots where library_date = '2026-10-03' and lower(a
 
 -- COMMAND ----------
 
+-- DBTITLE 1,Lyrics
 select *
 from ml.library_latest
 where lyrics is null
    and artist = 'Mel Gibson'
 order by playcount desc
 limit 100
+
+-- COMMAND ----------
+
+-- DBTITLE 1,albums without years
+with cte1 as (
+    select album, artist, max(year) as year, count(*) as C
+    from ml.library_latest
+    group by album, artist
+) , cte2 as (
+    select *
+    from cte1
+    where c >= 4
+    and year is null
+)
+select * from cte2
