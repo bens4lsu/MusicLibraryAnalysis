@@ -237,6 +237,7 @@ new_data = spark.table("workspace.ml.library_latest")
         new_data.alias("s"),
         "t.persistent_id = s.persistent_id"
     )
+    .withSchemaEvolution()
     .whenMatchedUpdateAll()
     .whenNotMatchedInsertAll()
     .execute()
