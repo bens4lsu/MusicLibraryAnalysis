@@ -5,7 +5,7 @@
 # ///
 from datetime import datetime
 
-libDate = dbutils.widgets.get("my_date")
+libDate = input("Enter the library date (YYYY-MM-DD): ")
 dtLibDate = datetime.strptime(libDate, "%Y-%m-%d").date()
 strLibDate = dtLibDate.strftime("%Y%m%d")
 print(strLibDate)
@@ -106,80 +106,80 @@ display(df)
 # COMMAND ----------
 
 # DBTITLE 1,insert to workspace.ml.library_snapshots
-# MAGIC %sql
-# MAGIC DELETE FROM workspace.ml.library_snapshots WHERE library_date = :my_date
-# MAGIC -- args: {'my_date': my_date}
-# MAGIC
-# MAGIC
-# MAGIC ;WITH RECURSIVE cteCurrIDs MAX RECURSION LEVEL 10000000 AS (
-# MAGIC   SELECT MAX(library_snapshot_id) AS max_snapshot_id
-# MAGIC     , MAX(ID) AS max_id
-# MAGIC   FROM workspace.ml.library_snapshots
-# MAGIC )
-# MAGIC
-# MAGIC INSERT INTO workspace.ml.library_snapshots
-# MAGIC SELECT currId.max_snapshot_id + 1 AS snapshot_id 
-# MAGIC   , :my_date AS library_date
-# MAGIC   , currId.max_id + ROW_NUMBER() OVER (PARTITION BY 1 ORDER BY 1) AS id
-# MAGIC   , tbl.persistent_id
-# MAGIC   , IFNULL(tbl.artist, '') AS artist
-# MAGIC   , tbl.album 
-# MAGIC   , tbl.name
-# MAGIC   , tbl.rating
-# MAGIC   , tbl.play_count
-# MAGIC   , tbl.genre
-# MAGIC   , tbl.play_date_utc
-# MAGIC   , tbl.date_added
-# MAGIC   , tbl.bit_rate
-# MAGIC   , tbl.year
-# MAGIC   , IFNULL(tbl.loved, false) AS loved
-# MAGIC   , NOT IFNULL(tbl.disabled, false) AS checked
-# MAGIC   , tbl.skip_count
-# MAGIC   , tbl.skip_date
-# MAGIC   , tbl.disc_number
-# MAGIC   , tbl.disc_count
-# MAGIC   , tbl.track_number
-# MAGIC   , tbl.track_count
-# MAGIC   , REPLACE(
-# MAGIC       REPLACE(
-# MAGIC         REPLACE(
-# MAGIC           REPLACE(
-# MAGIC             REPLACE(
-# MAGIC               try_url_decode(
-# MAGIC                 REPLACE(
-# MAGIC                   REPLACE(
-# MAGIC                     REPLACE(
-# MAGIC                       REPLACE(
-# MAGIC                           REPLACE(
-# MAGIC                             REPLACE(
-# MAGIC                               REPLACE(tbl.location, '100%20', '100 ')       -- doesn't url decode for some reason
-# MAGIC                               , '10%20', '10 ')                             -- doesn't url decode for some reason
-# MAGIC                           , '99.9\%', '___99POINT9PERCENT___')
-# MAGIC                           , '99\%', '___99PERCENT___')
-# MAGIC                       , '10\%', '___10PERCENT___')
-# MAGIC                     , '100\%', '___100PERCENT___'
-# MAGIC                   )
-# MAGIC                   , '+', '___PLUS___'
-# MAGIC                 )
-# MAGIC             )
-# MAGIC             , '___PLUS___', '+'
-# MAGIC           ) 
-# MAGIC           , '___100PERCENT___', '100%'
-# MAGIC         )
-# MAGIC         , '___10PERCENT___', '10%'
-# MAGIC       )
-# MAGIC       , '___99PERCENT___', '99%'
-# MAGIC     )
-# MAGIC     , '___99POINT9PERCENT___', '99.9%'
-# MAGIC   ) AS location
-# MAGIC FROM tbl
-# MAGIC CROSS JOIN cteCurrIDs currId
-# MAGIC WHERE NOT EXISTS (
-# MAGIC   SELECT 1 FROM workspace.ml.library_snapshots
-# MAGIC   WHERE library_date = :my_date
-# MAGIC )
-# MAGIC -- args: {'my_date': my_date}
-# MAGIC
+delete_sql = "DELETE FROM workspace.ml.library_snapshots WHERE library_date = :my_date"
+spark.sql(delete_sql, args={"my_date": dtLibDate})
+
+insert_sql = r"""
+WITH RECURSIVE cteCurrIDs MAX RECURSION LEVEL 10000000 AS (
+  SELECT MAX(library_snapshot_id) AS max_snapshot_id
+    , MAX(ID) AS max_id
+  FROM workspace.ml.library_snapshots
+)
+
+INSERT INTO workspace.ml.library_snapshots
+SELECT currId.max_snapshot_id + 1 AS snapshot_id 
+  , :my_date AS library_date
+  , currId.max_id + ROW_NUMBER() OVER (PARTITION BY 1 ORDER BY 1) AS id
+  , tbl.persistent_id
+  , IFNULL(tbl.artist, '') AS artist
+  , tbl.album 
+  , tbl.name
+  , tbl.rating
+  , tbl.play_count
+  , tbl.genre
+  , tbl.play_date_utc
+  , tbl.date_added
+  , tbl.bit_rate
+  , tbl.year
+  , IFNULL(tbl.loved, false) AS loved
+  , NOT IFNULL(tbl.disabled, false) AS checked
+  , tbl.skip_count
+  , tbl.skip_date
+  , tbl.disc_number
+  , tbl.disc_count
+  , tbl.track_number
+  , tbl.track_count
+  , REPLACE(
+      REPLACE(
+        REPLACE(
+          REPLACE(
+            REPLACE(
+              try_url_decode(
+                REPLACE(
+                  REPLACE(
+                    REPLACE(
+                      REPLACE(
+                          REPLACE(
+                            REPLACE(
+                              REPLACE(tbl.location, '100%20', '100 ')       -- doesn't url decode for some reason
+                              , '10%20', '10 ')                             -- doesn't url decode for some reason
+                          , '99.9\%', '___99POINT9PERCENT___')
+                          , '99\%', '___99PERCENT___')
+                      , '10\%', '___10PERCENT___')
+                    , '100\%', '___100PERCENT___'
+                  )
+                  , '+', '___PLUS___'
+                )
+            )
+            , '___PLUS___', '+'
+          ) 
+          , '___100PERCENT___', '100%'
+        )
+        , '___10PERCENT___', '10%'
+      )
+      , '___99PERCENT___', '99%'
+    )
+    , '___99POINT9PERCENT___', '99.9%'
+  ) AS location
+FROM tbl
+CROSS JOIN cteCurrIDs currId
+WHERE NOT EXISTS (
+  SELECT 1 FROM workspace.ml.library_snapshots
+  WHERE library_date = :my_date
+)
+"""
+spark.sql(insert_sql, args={"my_date": dtLibDate})
+
 
 # COMMAND ----------
 

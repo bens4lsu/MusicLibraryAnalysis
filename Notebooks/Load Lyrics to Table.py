@@ -27,6 +27,3 @@ display(lyrics_df)
 lyrics_df.write.mode("overwrite").saveAsTable("workspace.ml.lyrics")
 
 display(spark.sql("SELECT COUNT(*) AS row_count, COUNT(DISTINCT persistentID) AS distinct_tracks FROM workspace.ml.lyrics"))
-
-# COMMAND ----------
-

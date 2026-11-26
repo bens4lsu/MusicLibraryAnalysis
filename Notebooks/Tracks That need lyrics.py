@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # Write the cell-10 query results (tracks missing lyrics, top 100 by playcount)
 # to a single parquet file: needLyrics.parquet
 #
@@ -16,8 +20,9 @@ need_lyrics_df = spark.sql("""
 select *
 from ml.library_latest
 where lyrics is null
+    and (genre like '10%')
 order by playcount desc
-limit 100
+--limit 100
 """)
 
 target_file = "/Workspace/Users/ben@concordbusinessservicesllc.com/MusicLibraryAnalysis/Files/needLyrics.parquet"
